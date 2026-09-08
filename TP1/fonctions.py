@@ -8,4 +8,12 @@ def puissance(a, b):
     if a == 0 and b < 0:
         raise Exception("Operation undefined")
 
-    return a**b
+    resultat = 1
+
+    for i in range(abs(b)):
+        resultat = resultat * a
+
+    if b < 0:
+        resultat = 1 / resultat
+
+    return resultat
